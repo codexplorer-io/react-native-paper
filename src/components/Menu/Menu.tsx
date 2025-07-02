@@ -203,7 +203,7 @@ class Menu extends React.Component<Props, State> {
   private updateVisibility = async () => {
     // Menu is rendered in Portal, which updates items asynchronously
     // We need to do the same here so that the ref is up-to-date
-    await Promise.resolve();
+    await new Promise(resolve => setTimeout(resolve, 100));
 
     if (this.props.visible) {
       this.show();
