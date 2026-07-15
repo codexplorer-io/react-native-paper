@@ -62,6 +62,7 @@ const LabelBackground = ({
             {
               top: topPosition + 1,
               backgroundColor,
+              color: backgroundColor, // Fix for Android transparent text artifacts
               opacity,
               transform: [
                 ...labelStyle.transform,
